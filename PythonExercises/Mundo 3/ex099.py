@@ -25,7 +25,6 @@ def maior(* num):
     print('-=' * 20)
     sleep(0.5)
 
-
 maior(4, 9, 0, 3, 6, 5)
 maior(4, 7, 0)
 maior(2, 4, 5, 1, 3, 9)
