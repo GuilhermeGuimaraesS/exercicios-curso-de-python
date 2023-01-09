@@ -1,10 +1,11 @@
 from time import sleep
 
 def contagem(a, b, c):
+    # a = Ínicio; b = Fim; c = Passo
     print('-=' * 30)
     print(f'Contagem de {a} até {b} de {c} em {c} ')
     sleep(2.5)
-    if a > b:
+    if a > b:   
         if c < 0:
             c *= (-1)
         elif c == 0:
@@ -29,7 +30,7 @@ contagem(1, 10, 1)
 contagem(10, 0, 2)
 
 print('-=' * 30)
-print('Agora é sua vez! Digite os valores para uma contagem personaizada. ')
+print('Agora é sua vez! Digite os valores para uma contagem personalizada. ')
 inicio = int(input('Primeiro valor da contagem: '))
 final = int(input('Último valor da contagem: '))
 step = int(input('Passo da contagem: '))

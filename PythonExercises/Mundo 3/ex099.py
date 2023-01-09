@@ -1,6 +1,5 @@
 from time import sleep
 
-
 def maior(* num):
     tam = len(num)
     if tam == 0:
@@ -20,6 +19,7 @@ def maior(* num):
             sleep(0.5)
     else:
         print(f'{num}', end=' ')
+    print()
     print(f'Foram digitados {tam} valores ao todo. ')
     print(f'O maior valor dentre esses é {maior_num}. ')
     print('-=' * 20)

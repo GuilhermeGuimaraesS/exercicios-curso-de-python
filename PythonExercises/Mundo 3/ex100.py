@@ -22,6 +22,5 @@ def somaPar():
 
     print(f'Dentre esses, os pares são: {lst_pares}. Somando eles, temos {soma_par}')
 
-
 sorteio()
 somaPar()
