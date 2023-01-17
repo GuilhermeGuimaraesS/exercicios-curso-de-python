@@ -9,7 +9,7 @@ def ficha(nome, tot_gols):
     print(f'O jogador {nome} fez {tot_gols} gol(s) no campeonato. ')
 
 
-# program principal
+# programa principal
 
 jogador = str(input('Nome do Jogador: ')).capitalize()
 num = str(input('Número de Gols: '))
