@@ -7,6 +7,7 @@ def notas(*num, situ=False):
     :param num: recebe uma ou mais notas dos alunos.
     :param situ: parâmetro opcional; indica se é para adicionar ou não a situação.
     :return: dicionário com várias informações da turma.
+    Função criada por Guilherme Guimarães dos Santos
     """
     cont = tot_notas = soma = 0
     maior_nota = menor_nota = 0
