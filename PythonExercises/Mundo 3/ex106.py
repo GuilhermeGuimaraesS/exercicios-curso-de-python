@@ -9,10 +9,7 @@ def enunciado(msg):
     print('=' * tot_caract)
 
 def PyHelp(comando):
-    from time import sleep
-
-    help(comando)
-    sleep(0.5)
+    return help(comando)
 
 
 def enunciadoDois(msg, n):
@@ -30,8 +27,11 @@ def enunciadoDois(msg, n):
 
 
 # programa principal
-
-enunciado('SISTEMA DE AJUDA PyHelp')
-nome = str(input('Nome da Função ou Biblioteca: '))
-enunciadoDois('Acessando o manual do comando', nome)
-help(nome)
+while True:
+    enunciado('SISTEMA DE AJUDA PyHelp')
+    nome = str(input('Nome da Função ou Biblioteca: ')).lower()
+    if nome == 'fim':
+        break
+    enunciadoDois('Acessando o manual do comando', nome)
+    print(PyHelp(nome))
+enunciado('ATÉ LOGO!')
