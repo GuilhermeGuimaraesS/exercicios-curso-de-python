@@ -6,7 +6,7 @@ def moeda(n = 0):
     Função criada por Guilherme Guimarães dos Santos
     """
     n = f'{n:.2f}' # Deixa o valor com apenas duas casas decimais
-    res = n.replace('.', ',') # Troca ponto por vírgula
+    res = str(n).replace('.', ',') # Troca ponto por vírgula
     return f'R${res}'
 
 
@@ -19,7 +19,6 @@ def aumentar(n = 0, p = 0, formt=False):
     :return: valor com o aumento.
     Função criada por Guilherme Guimarães dos Santos
     """
-    
     alter = n * (p / 100)
     res = n + alter
     if formt:
@@ -75,4 +74,31 @@ def metade(n = 0, formt=False):
         return res
 
 
+def título(msg):
+    global tot_espaço
+    tot_espaço = len(msg) + 16
+    print('-' * tot_espaço)
+    print( f'{msg.center(tot_espaço)}')
+    print('-' * tot_espaço)
+
+
+def resumo(n, perc_a = 0,  perc_r = 0):
+    """
+    -> Função que analisa um valor fornecido e retorna ele próprio, seu dobro, sua metade, aumento(taxa fornecida) e redução (taxa fornecida). A função guarda todos os dados em um dicionário
+    :param n: valor que será analisado
+    :param perc_a: percentual de aumento
+    :param perc_r: percentual de redução
+    Função criada por Guilherme Guimarães dos Santos
+    """
+    resultados = dict()
+    resultados['Preço Analisado:'] = moeda(n)
+    resultados['Dobro do preço:'] = dobro(n, True)
+    resultados['Metade do preço:'] = metade(n, True)
+    resultados[f'{perc_a}% de aumento:'] = aumentar(n, perc_a, True)
+    resultados[f'{perc_r}% de redução:'] = diminuir(n, perc_r, True)
+    
+    título('RESUMO DO VALOR')
+    for k in resultados:
+        print(f'{k.ljust(20)} {resultados[k]}')
+    print('-' * tot_espaço)
 
