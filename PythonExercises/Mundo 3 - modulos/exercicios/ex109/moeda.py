@@ -15,6 +15,7 @@ def aumentar(n = 0, p = 0, formt=False):
     ->  Aumenta o valor recebido do usuário de acordo com o percentual desejado.
     :param n: valor que será mudado.
     :param p: percentual de aumento.
+    :param formt: (True formata, False não formata (padrão))variável para formatar ou não o valor retornado pela função.
     :return: valor com o aumento.
     Função criada por Guilherme Guimarães dos Santos
     """
@@ -32,6 +33,7 @@ def diminuir(n = 0, p = 0, formt=False):
     ->  Diminue o valor recebido do usuário de acordo com o percentual desejado.
     :param n: valor que será mudado.
     :param p: percentual de redução.
+    :param formt: (True formata, False não formata (padrão))variável para formatar ou não o valor 
     :return: valor com a redução
     Função criada por Guilherme Guimarães dos Santos
     """
@@ -47,6 +49,7 @@ def dobro(n = 0, formt=False):
     """
     -> Calcula o dobro do valor fornecido
     :param n: valor que será calculado.
+    :param formt: (True formata, False não formata (padrão))variável para formatar ou não o valor 
     :return: dobro do valor fornecido.
     Função criada por Guilherme Guimarães dos Santos
     """
@@ -61,6 +64,7 @@ def metade(n = 0, formt=False):
     """
     -> Calcula a metade do valor fornecido
     :param n: valor que será calculado.
+    :param formt: (True formata, False não formata (padrão))variável para formatar ou não o valor 
     :return: metade do valor fornecido.
     Função criada por Guilherme Guimarães dos Santos
     """
