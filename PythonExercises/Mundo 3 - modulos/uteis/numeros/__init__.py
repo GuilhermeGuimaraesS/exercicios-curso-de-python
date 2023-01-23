@@ -11,4 +11,3 @@ def dobro(n):
 
 def triplo(n):
     return n * 3
-
