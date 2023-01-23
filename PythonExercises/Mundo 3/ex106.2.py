@@ -1,4 +1,6 @@
 # Solução criada pelo professor Gustavo Guanabara
+from time import sleep
+
 c = ('\033[m', # 0 - sem cores
      '\033[0;30;41m', # 1 - vermelho 
      '\033[0;30;42m', # 2 - verde 
@@ -10,10 +12,11 @@ c = ('\033[m', # 0 - sem cores
 
 
 def ajuda(com):
-    título(f'ACESSANDO O MANUAL DO COMANDO \'{com}\'', 4)
     print(c[6], end='')
+    título(f'ACESSANDO O MANUAL DO COMANDO \'{com}\'', 4)
     help(com)
     print(c[0], end='')
+    sleep(2)
 
 def título(msg, cor=0):
     tam = len(msg) + 4
@@ -22,6 +25,7 @@ def título(msg, cor=0):
     print( f' {msg}' )
     print('~' * tam)
     print(c[0], end='')
+    sleep(1)
 
 
 # programa principal
