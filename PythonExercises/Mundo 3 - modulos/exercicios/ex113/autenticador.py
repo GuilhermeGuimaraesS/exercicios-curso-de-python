@@ -7,6 +7,10 @@ def leiaInt(msg=''):
     while True:
         try:
             num = int(input(msg))
+        except ValueError:
+            print('\033[0;31mO usuário preferiu não digitar esse número \033[m')
+            num = 0
+            break
         except:
             print('\033[0;31mERRO! Digite um número inteiro válido \033[m')
         else:
@@ -23,6 +27,10 @@ def leiaFloat(msg=''):
     while True:
         try:
             num = float(input(msg))
+        except ValueError:
+            print('\033[0;31mO usuário preferiu não digitar esse número \033[m')
+            num = 0
+            break
         except:
             print('\033[0;31mERRO! Digite um valor real válido \033[m')
         else:

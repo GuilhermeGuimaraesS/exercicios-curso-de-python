@@ -1,3 +1,6 @@
-import urllib
+import urllib.request
 
-help(urllib)
+try:
+
+except:
+    print('O site ')
