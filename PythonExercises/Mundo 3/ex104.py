@@ -18,3 +18,4 @@ def leiaInt(msg):
 
 num = leiaInt('Digite um número: ')
 print(f'Você digitou o número:  {num}. ')
+    
