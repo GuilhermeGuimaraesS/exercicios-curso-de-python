@@ -10,4 +10,16 @@ def leiaInt(msg):
             print('\033[0;31mERRO! Digite um número inteiro válido. \033[m')
     return valor
 
-num = leiaInt('Digite um número inteiro: ')
+
+def leiaFloat(msg):
+    valido = False
+    valor = 0
+    while not valido:
+        num = str(input(msg)).replace(',','.').strip()
+        if num.isalpha() or num == '':
+            print('\033[0;31mERRO! Digite um número real válido. \033[m')
+        else:
+            valido = True
+            valor = float(num)
+    return valor
+
