@@ -82,7 +82,7 @@ def título(msg):
     print('-' * tot_espaço)
 
 
-def resumo(n, perc_a = 0,  perc_r = 0):
+def resumo(n=0, perc_a = 10,  perc_r = 5):
     """
     -> Função que analisa um valor fornecido e retorna ele próprio, seu dobro, sua metade, aumento(taxa fornecida) e redução (taxa fornecida). A função guarda todos os dados em um dicionário
     :param n: valor que será analisado
