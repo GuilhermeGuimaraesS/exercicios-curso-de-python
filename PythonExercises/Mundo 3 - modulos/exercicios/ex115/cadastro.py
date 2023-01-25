@@ -15,7 +15,6 @@ def vazio(entr, msg):
     
 def leiaNome(msg):
     valido = False
-    # name = ''
     while not valido:
         entrada = str(input(msg)).strip().upper()
         nome_sobrenome = vazio(entrada, 'Nome ') 
@@ -33,10 +32,14 @@ def leiaNome(msg):
     return name_full
 
 
-# def leiaIdade(msg):
-#     age = 0
-#     try:
-#         age = int(input(msg))
+def leiaIdade(msg):
+    age = 0
+    try:
+        age = int(input(msg))
+    except:
+        print('Digite um número')
+
+
 
 cliente = leiaNome('Nome:  ')
 print(cliente)
