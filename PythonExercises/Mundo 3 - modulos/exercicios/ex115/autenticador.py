@@ -57,3 +57,21 @@ def leiaIdade(msg):
         else:
             valido = True
     return age
+
+
+class NumeroForaDoIntervalo(Exception): # Gera classe de erro de intervalo
+    pass
+
+def intervalo(n, i, f):
+    """
+    -> Função para verificar se a variável analisada está no intervalo desejado
+    :param n: variável que será analisada.
+    :param i: início do intervalo.
+    :param f: fim do intervalo.
+    :return: variável já analisada
+    Função criada por Guilherme Guimarães dos Santos
+    """
+    if n not in range(i, f):
+        raise NumeroForaDoIntervalo
+    else:
+        return n 
