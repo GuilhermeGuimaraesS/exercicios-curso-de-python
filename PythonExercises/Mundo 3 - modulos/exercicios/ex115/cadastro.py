@@ -2,10 +2,11 @@
 
     # - Nome; Criar uma função que leia apenas nomes. A função irá validar se foi digitado apenas strings
 
-def vazio(entrada):
+def vazio(entrada, msg):
     while True:
         if entrada == '':
             print('ERRO! Digite um nome válido... ')
+            entrada = str(input(msg)).strip().upper()
         else:
             break
     return entrada
@@ -15,7 +16,7 @@ def leiaNome(msg):
     name = ''
     while not valido:
         entrada = str(input(msg)).strip().upper()
-        nome_sobrenome = vazio(entrada)
+        nome_sobrenome = vazio(entrada, msg)
         nome_sobrenome = entrada.split() # Fatia a entrada, dividindo nome e sobrenome
 
         pontos_validos = 0
