@@ -10,21 +10,14 @@ from autenticador import leiaNome
 from autenticador import leiaIdade
     
 # Criar menu principal do sistema e fazer a coleta dos dados
-
-def titulo(msg):
-    print('-' * 50)
-    print(msg.center(50))
-    print('-' * 50)
-    
+from autenticador import titulo
+from autenticador import menu
     
 escolha = 0
 while escolha != 3:
     sleep(1)
-    titulo('MENU PRINCIPAL')
-    print('\033[0;33m1 -\033[m \033[0;34mVerificar pessoas cadastradas \033[m')
-    print('\033[0;33m2 -\033[m \033[0;34mCadastrar nova pessoa \033[m')
-    print('\033[0;33m3 -\033[m \033[0;34mSair do Sistema \033[m')
-    print('-' * 50)
+    opcs = ['Verificar pessoas cadastradas', 'Cadastrar nova pessoa', 'Sair do Sistema']
+    menu(opcs)
     while True:
         try:
             escolha = int(input('\033[0;33mOpção desejada: \033[m'))
