@@ -7,12 +7,12 @@ def leiaInt(msg=''):
     while True:
         try:
             num = int(input(msg))
-        except ValueError:
-            print('\033[0;31mO usuário preferiu não digitar esse número \033[m')
-            num = 0
-            break
+        except (KeyboardInterrupt):
+            print('\n\033[0;31mEntrada de dados interrompida pelo usuário. \033[m')
+            return 0
         except:
             print('\033[0;31mERRO! Digite um número inteiro válido \033[m')
+            continue # volta para o inicio do loop
         else:
             break
     return num
@@ -27,7 +27,7 @@ def leiaFloat(msg=''):
     while True:
         try:
             num = float(input(msg))
-        except ValueError:
+        except (ValueError, KeyboardInterrupt):
             print('\033[0;31mO usuário preferiu não digitar esse número \033[m')
             num = 0
             break
